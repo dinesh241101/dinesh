@@ -1,6 +1,8 @@
 # my_app1
 
 A new Flutter project.
+version-1.0
+package id-1.0
 
 ## Getting Started
 

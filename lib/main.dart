@@ -12,6 +12,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter ',
+      debugShowCheckedModeBanner: false,
+      darkTheme: ThemeData.dark(),
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -28,9 +30,14 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.pink),
+        cardColor: Colors.cyan,
         useMaterial3: true,
+
+         primarySwatch: Colors.orange,
       ),
+
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -50,10 +57,10 @@ class MyHomePage extends StatefulWidget {
 
   final String title;
 
+
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
-
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
@@ -85,11 +92,15 @@ class _MyHomePageState extends State<MyHomePage> {
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
+
       ),
+      backgroundColor: Colors.lightBlue,
+
       body: Center(
+
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
-        child: Column(
+        child: Row(
           // Column is also a layout widget. It takes a list of children and
           // arranges them vertically. By default, it sizes itself to fit its
           // children horizontally, and tries to be as tall as its parent.
@@ -117,9 +128,8 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
-        tooltip: 'Increased',
+        tooltip: 'Incremented',
         child: const Icon(Icons.add_alert),
-
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
